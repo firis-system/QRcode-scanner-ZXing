@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Firis SA, 2019">
+        <title>ZXing TypeScript | Decoding from camera stream</title>
+        <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+        <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/milligram@1.3.0/dist/milligram.min.css">
+        <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="./style.css">
+    </head>
+    <body>
+        <main class="wrapper" style="padding-top:2em">
+            <section class="container" id="demo-content">
+                <h1 class="title">Scan QR Code from Video Camera</h1>
+                <p>This example shows how to scan a QR code with ZXing javascript library from the device video camera. If
+                more
+                than one video input devices are available (for example front and back camera) the example shows how to
+                read
+                them and use a select to change the input device.</p>
+                <div>
+                    <a class="button" id="startButton">Start</a>
+                    <a class="button" id="resetButton">Reset</a>
+                </div>
+                <div>
+                    <video id="video" width="300" height="200" style="border: 1px solid gray"></video>
+                </div>
+                <div id="sourceSelectPanel" style="display:none">
+                    <label for="sourceSelect">Change video source:</label>
+                    <select id="sourceSelect" style="max-width:400px">
+</select>
+                </div>
+                <div style="display: table">
+                    <label for="decoding-style"> Decoding Style:</label>
+                    <select id="decoding-style" size="1">
+                        <option value="once">Decode once</option>
+                        <option value="continuously" selected="selected">Decode continuously</option>
+                    </select>
+                </div>
+                <label>Result:</label>
+                <pre><code id="result"></code></pre>
+                <p>See the <a href="https://github.com/firis-system/QRcode-scanner-ZXing/">source
+                    code</a> for
+                this example.</p>
+            </section>
+            <footer class="footer wrapper">
+                <section class="container">
+                    <div class="credits">
+                        <p>Example tweaked by <a targer="_blank" href="http://www.firis-system.com/">Firis</a>, 2019. <br>Based on ZXing TypeScript Demo. <a target="_blank" href="https://github.com/zxing-js/library#license" title="MIT">MIT Licensed</a>.</p>
+                        <p></p>
+                    </div>
+                    <img id="logo" src="./firis-logo.png" width="150px">
+                    <div class="clear"></div>
+                </section>
+            </footer>
+        </main>
+        <script type="text/javascript" src="./zxing.js"></script>
+        <!-- <script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script> -->
+        <script type="text/javascript" src="./index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+body {
+    background-color: #282828;
+    color: darkgrey;
+}
+
+.credits {
+    position: relative;
+    float: left;
+    width: 400px;
+}
+
+#logo {
+    position: relative;
+    float: right;
+    margin-top: -50px;
+    margin-right: 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+select {
+    background-color: #ffffff;
+}
+
+.button {
+    background-color: #ffffff;
+    color: #282828;
+}
